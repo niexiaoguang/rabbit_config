@@ -8,8 +8,6 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-    # expose:
-    #   - "15672" # web ui by nginx reverse proxy 
     environment:
       TZ: "Asia/Shanghai"
     tty: true
