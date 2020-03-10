@@ -1,0 +1,19 @@
+version: '3.0'
+
+services:
+  rabbitmq:
+    restart: always
+    image: rabbitmq:3.8.2-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    # expose:
+    #   - "15672" # web ui by nginx reverse proxy 
+    environment:
+      TZ: "Asia/Shanghai"
+    tty: true
+    volumes:
+      - ./data:/var/lib/rabbitmq
+      - ./conf/brender_rabbit.conf:/etc/rabbitmq/rabbitmq.config
+    command:  bash -c "sleep 5; rabbitmq-plugins enable rabbitmq_management; rabbitmq-server;"
