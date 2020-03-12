@@ -11,6 +11,10 @@ services:
       - "15672:15672"
       - "15671:15671"
     # environment:
+      # RABBIT_MANAGEMENT_PASSWORD: "admin"
+      # RABBIT_MANAGEMENT_USER: "pass"
+      # RABBITMQ_DEFAULT_USER: "rabbitmq"
+      # RABBITMQ_DEFAULT_PASS: "rabbitmq"
       # - TZ=Asia/Shanghai
     tty: true
     volumes:
