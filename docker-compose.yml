@@ -6,9 +6,9 @@ services:
     image: brender-rabbitmq:3.8.2-management-alpine
     container_name: rabbitmq
     ports:
-      - "5672:5672"
+      # - "5672:5672"
       - "5671:5671"
-      - "15672:15672"
+      - "5678:5678"
       - "15671:15671"
     # environment:
       # RABBIT_MANAGEMENT_PASSWORD: "admin"
