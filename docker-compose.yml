@@ -7,9 +7,9 @@ services:
     container_name: rabbitmq
     ports:
       # - "5672:5672"
-      - "5671:5671"
-      - "5678:5678"
-      - "15671:15671"
+      # - "5671:5671"
+      - "5672:5672"
+      - "15672:15672"
     # environment:
       # RABBIT_MANAGEMENT_PASSWORD: "admin"
       # RABBIT_MANAGEMENT_USER: "pass"
