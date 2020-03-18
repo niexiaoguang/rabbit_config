@@ -8,8 +8,10 @@ services:
     ports:
       # - "5672:5672"
       - "5671:5671"
-      - "5678:5678"
-      - "15671:15671"
+      - "5672:5672"
+      - "15672:15672"
+      - "1883:1883"
+      - "8883:8883"
     # environment:
       # RABBIT_MANAGEMENT_PASSWORD: "admin"
       # RABBIT_MANAGEMENT_USER: "pass"
@@ -22,5 +24,5 @@ services:
       # - "/etc/localtime:/etc/localtime:ro"
       - ./data:/var/lib/rabbitmq
       - ./conf/brender_rabbit.conf:/etc/rabbitmq/rabbitmq.config
-      - ./ssl:/usr/local/rabbitmq/ssl/
+      - ./conf/tls/:/usr/local/rabbitmq/ssl/
     # command:  bash -c "date; sleep 5; rabbitmq-plugins enable rabbitmq_management; rabbitmq-server;"
