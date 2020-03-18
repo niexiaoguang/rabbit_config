@@ -2,4 +2,4 @@
 data/
 .erlang.cookie
 /ssl
-/tls
+/conf/tls
