@@ -3,7 +3,7 @@ version: '3.0'
 services:
   rabbitmq:
     restart: always
-    image: brender-rabbitmq:3.8.2-management-alpine
+    image: brender-rabbit
     container_name: rabbitmq
     ports:
       # - "5672:5672"

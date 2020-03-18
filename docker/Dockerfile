@@ -8,10 +8,12 @@ EXPOSE 15671
 EXPOSE 15672
 EXPOSE 5671
 EXPOSE 5672
+EXPOSE 1883
+EXPOSE 8883
 
-RUN echo "2020031301" >> /dev/null
+RUN echo "2020031801" >> /dev/null
 RUN date
 RUN rabbitmq-plugins enable rabbitmq_management
 RUN rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
-
+RUN rabbitmq-plugins enable rabbitmq_mqtt
 CMD ["rabbitmq-server"]
