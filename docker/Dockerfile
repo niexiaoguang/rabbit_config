@@ -6,7 +6,7 @@ RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && apk del tzdata
 
 EXPOSE 15671
-# EXPOSE 15672
+EXPOSE 15672
 EXPOSE 5671
 EXPOSE 5672
 EXPOSE 1883
@@ -17,4 +17,5 @@ RUN date
 RUN rabbitmq-plugins enable rabbitmq_management
 RUN rabbitmq-plugins enable rabbitmq_auth_mechanism_ssl
 RUN rabbitmq-plugins enable rabbitmq_mqtt
+
 CMD ["rabbitmq-server"]
